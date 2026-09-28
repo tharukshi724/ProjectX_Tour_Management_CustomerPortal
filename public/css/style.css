@@ -138,6 +138,31 @@ body.has-hero .navbar:not(.is-scrolled) .nav-toggle span { background: #fff; }
     .nav-links.is-open { display: flex; }
     .nav-cta { text-align: center; }
     .nav-link-gap { margin-left: 0; }
+
+    .nav-links a:not(.nav-cta),
+    body.has-hero .navbar:not(.is-scrolled) .nav-links a:not(.nav-cta) {
+        color: var(--paper);
+        opacity: 1;
+        text-shadow: none;
+        font-size: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--asphalt-700);
+    }
+    .nav-links a:not(.nav-cta)::after { display: none; }
+    .nav-links {
+        gap: 0;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        box-shadow: 0 16px 28px rgba(16,59,62,0.14);
+    }
+    .nav-links .nav-cta { margin-top: 16px; }
+
+    body.has-hero .navbar:not(.is-scrolled):has(.nav-links.is-open) {
+        background: var(--asphalt-900);
+        border-bottom-color: var(--asphalt-700);
+    }
+    body.has-hero .navbar:not(.is-scrolled):has(.nav-links.is-open) .nav-toggle span { background: var(--paper); }
+    body.has-hero .navbar:not(.is-scrolled):has(.nav-links.is-open) .brand-slogan { color: var(--gold-text); text-shadow: none; }
 }
 
 /* ==========================================================================
